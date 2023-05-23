@@ -23,14 +23,23 @@
     <div><img src="image/lock.svg" alt="privacy">Privacy</div>
 </div>
 <div class="navigation">
-        <img src="image/bell-outline.svg" alt="notifications">
+    <div class="searchbar-and-avatar">
+        <div class="searchbar-and-notification">
+            <img src="/image/magnify.svg" alt="magnifying-glass">
         <form>
             <input type="search" name="search" placeholder="Search...">
-            <input type="submit" value="Submit">
           </form>
-        <div><img src="image/cat.jpg" alt="profile-picture">Abri</div>
-        <div><img src="image/cat.jpg" alt="profile-picture" class="avatar">Hi there, 
-            <div>Abri (@abri)</div></div>
+        </div>
+        <div class="profile-picture-wrapper">
+            <img src="image/bell-outline.svg" alt="notifications">
+            <img class="profile-picture avatar" src="image/cat.jpg" alt="profile-picture">
+           <div>Abri</div>
+        </div>
+    </div>
+    
+        <div><img class="profile-picture" id="big-profile-picture" src="image/cat.jpg" alt="profile-picture" class="avatar">Hi there, 
+            <div>Abri (@abri)</div>
+        </div>
         <button>New</button>
         <button>Upload</button>|
         <button>Share</button>

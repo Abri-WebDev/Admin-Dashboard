@@ -1,1 +1,87 @@
-  
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}  
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.dashboard {
+    background-color: #6597c4;
+    grid-row: 1/5;
+}
+
+.dashboard > div {
+    color: #f4f4f4;;
+}
+
+.navigation {
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+}
+
+.navigation > img {
+    width: 50px;
+    height: 50px;
+}
+
+.searchbar-and-notification {
+    display: grid;
+}
+/*
+.searchbar-and-notification > img {
+    justify-self: center;
+}*/
+
+.searchbar-and-notification > form {
+    display: contents;
+}
+
+form {
+    display: contents;
+}
+
+input[type="search"] {
+    grid-column: 2 / 3 span;
+}
+
+.searchbar-and-avatar {
+    display: grid;
+    grid-template-columns: auto 2fr 1fr;
+}
+
+.profile-picture-wrapper {
+    grid-template-columns: repeat(3,1fr);
+    display: grid;
+    grid-column: 3/4;
+}
+
+
+.avatar {
+    justify-self: end;
+}
+
+div > img {
+    width: 50px; /* Adjust the width and height to your desired icon size */
+    height: 50px;
+}
+
+.profile-picture {
+    width: 50px; /* Adjust the width and height to your desired icon size */
+    height: 50px;
+    border-radius: 50%; /* Makes the icon circular */
+    overflow: hidden;
+}
+
+#big-profile-picture {
+    width: 60px;
+}
+
+.projects-list {
+    grid-row: 2/ 5;
+    grid-column: 2 / 5;
+}
