@@ -7,19 +7,20 @@
 .container {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(4, 1fr);
+   /* grid-template-rows: repeat(4, 1fr);*/
 }
 
 .menu {
     background-color: #6597c4;
     grid-row: 1/5;
     display: grid;
-    grid-template-rows: 1fr 2fr 3fr;
+    grid-template-rows: 10% 2fr 3fr;
 }
 
 .menu > div {
     color: #f4f4f4;
     align-content: center;
+    font-size: 15px;
 }
 
 .menu-container > div {
@@ -28,8 +29,12 @@
     grid-template-columns: 1fr 4fr;
 }
 
-.menu > div > img {
+.menu-container > div > img {
     justify-self: center;
+}
+
+.menu-container > div > div {
+    align-self: center;
 }
 
 .menu > div > div {
@@ -40,6 +45,10 @@
     display: grid;
     align-content: center;
     grid-template-columns: 1fr 4fr;
+}
+
+.dashboard > img {
+    justify-self: center;
 }
 
 .navigation {
@@ -77,18 +86,41 @@ input[type="search"] {
 
 .searchbar-and-avatar {
     display: grid;
-    grid-template-columns:  2fr 1fr;
+}
+
+.avatar-and-buttons {
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+}
+
+.avatar-and-buttons > div:nth-child(1) {
+    justify-self: center;
+}
+
+.user-greeting {
+    align-self: center;
+}
+
+.button-group {
+    align-self: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.button-group > button {
+    height: 30px;
 }
 
 .profile-picture-wrapper {
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr) 10%;
     display: grid;
     grid-column: 2/4;
     grid-gap: 10px;
 }
 
 .notifications {
-    justify-self: center;
+    justify-self: end;
 }
 
 .avatar {
@@ -117,6 +149,7 @@ div > img {
 }
 
 .projects-list {
+    background-color: #e6e6e6;
     grid-row: 2/ 5;
     grid-column: 2 / 5;
 }
