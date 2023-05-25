@@ -10,13 +10,36 @@
     grid-template-rows: repeat(4, 1fr);
 }
 
-.dashboard {
+.menu {
     background-color: #6597c4;
     grid-row: 1/5;
+    display: grid;
+    grid-template-rows: 1fr 2fr 3fr;
 }
 
-.dashboard > div {
-    color: #f4f4f4;;
+.menu > div {
+    color: #f4f4f4;
+    align-content: center;
+}
+
+.menu-container > div {
+    display: grid;
+    align-content: center;
+    grid-template-columns: 1fr 4fr;
+}
+
+.menu > div > img {
+    justify-self: center;
+}
+
+.menu > div > div {
+    align-self: center;
+}
+
+.dashboard {
+    display: grid;
+    align-content: center;
+    grid-template-columns: 1fr 4fr;
 }
 
 .navigation {
@@ -31,11 +54,13 @@
 
 .searchbar-and-notification {
     display: grid;
+    grid-template-columns: 1fr 6fr;
 }
-/*
+
 .searchbar-and-notification > img {
     justify-self: center;
-}*/
+    align-self: center;
+}
 
 .searchbar-and-notification > form {
     display: contents;
@@ -46,28 +71,38 @@ form {
 }
 
 input[type="search"] {
-    grid-column: 2 / 3 span;
+    align-self: center;
+    grid-column: 2 / 2 span;
 }
 
 .searchbar-and-avatar {
     display: grid;
-    grid-template-columns: auto 2fr 1fr;
+    grid-template-columns:  2fr 1fr;
 }
 
 .profile-picture-wrapper {
     grid-template-columns: repeat(3,1fr);
     display: grid;
-    grid-column: 3/4;
+    grid-column: 2/4;
+    grid-gap: 10px;
 }
 
+.notifications {
+    justify-self: center;
+}
 
 .avatar {
-    justify-self: end;
+    justify-self: center;
+}
+
+.profile-picture-wrapper > div {
+    justify-self: start;
+    align-self: center;
 }
 
 div > img {
-    width: 50px; /* Adjust the width and height to your desired icon size */
-    height: 50px;
+    width: 40px; /* Adjust the width and height to your desired icon size */
+    height: 40px;
 }
 
 .profile-picture {
